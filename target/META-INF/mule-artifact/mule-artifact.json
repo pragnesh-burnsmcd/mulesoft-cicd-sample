@@ -1,0 +1,39 @@
+{
+  "configs": [
+    "global-config.xml",
+    "common-health-check.xml"
+  ],
+  "secureProperties": [],
+  "redeploymentEnabled": true,
+  "name": "601dfad5-7be8-47f4-a62f-6df888b86612:pub-common-health-check:1.0.19-SNAPSHOT",
+  "minMuleVersion": "4.4.0",
+  "requiredProduct": "MULE_EE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [],
+      "exportedResources": [
+        "log4j2.xml",
+        "global-config.xml",
+        "application-types.xml",
+        "properties/dev-secure-config.yaml",
+        "properties/dev-01-secure-config.yaml",
+        "properties/uat-01-secure-config.yaml",
+        "properties/prod-secure-config.yaml",
+        "properties/qa-01-secure-config.yaml",
+        "properties/uat-01-config.yaml",
+        "properties/local-config.yaml",
+        "properties/prod-config.yaml",
+        "properties/dev-config.yaml",
+        "properties/dev-01-config.yaml",
+        "properties/qa-01-config.yaml",
+        "properties/local-secure-config.yaml",
+        "common-health-check.xml"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}
