@@ -13,7 +13,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<app.runtime>4.2.2</app.runtime>
+		<app.runtime>4.4.0</app.runtime>
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
 	</properties>
 
@@ -27,10 +27,11 @@
 				<configuration>
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
-						<muleVersion>4.2.2</muleVersion>
+						<muleVersion>4.4.0</muleVersion>
 						<username>pragnesh-utk</username>
 						<password>Mulesoft2023#</password>
 						<applicationName>mulesoft-cicd-sample</applicationName>
+						<businessGroup>UTK</businessGroup>
 						<environment>DEV</environment>
 						<workerType>MICRO</workerType>
 						<objectStoreV2>true</objectStoreV2>
