@@ -30,7 +30,7 @@
 						<muleVersion>4.4.0</muleVersion>
 						<username>pragnesh-utk</username>
 						<password>Mulesoft2023#</password>
-						<applicationName>mulesoft-cicd-sample</applicationName>
+						<applicationName>utk-mulesoft-cicd-sample</applicationName>
 						<businessGroup>UTK</businessGroup>
 						<environment>DEV</environment>
 						<workerType>MICRO</workerType>
