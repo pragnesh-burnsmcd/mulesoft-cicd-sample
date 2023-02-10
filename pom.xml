@@ -31,7 +31,7 @@
 						<username>pragnesh-utk</username>
 						<password>Mulesoft2023#</password>
 						<applicationName>mulesoft-cicd-sample</applicationName>
-						<environment>Sandbox</environment>
+						<environment>DEV</environment>
 						<workerType>MICRO</workerType>
 						<objectStoreV2>true</objectStoreV2>
 					</cloudHubDeployment>
