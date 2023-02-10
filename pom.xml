@@ -28,8 +28,8 @@
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>4.2.2</muleVersion>
-						<username>mulepoc</username>
-						<password>**********</password>
+						<username>pragnesh-utk</username>
+						<password>Mulesoft2023#</password>
 						<applicationName>mulesoft-cicd-sample</applicationName>
 						<environment>Sandbox</environment>
 						<workerType>MICRO</workerType>
