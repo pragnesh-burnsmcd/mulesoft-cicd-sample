@@ -22,11 +22,7 @@ http://www.mulesoft.org/schema/mule/module-error-handler-plugin http://www.mules
 output application/json
 ---
 {
-	"firstname":"Pragnesh",
-	"lastname":" Desai",
-	"address": "Test Ave, Atlanta, GA 30041",
-	"dob": "01/01/1995",
-	"ssn": "123-456-7862"
+	"Message":" Hello Mule from Pragnesh Desai."
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
@@ -66,7 +62,7 @@ output application/json
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
-		<raise-error doc:name="Raise error" doc:id="9e683730-b1ff-4497-a311-81bdd0e53add" type="MULE:CONNECTIVITY" description="The process is not able to connect to external webservice to process data." />
+		<raise-error doc:name="Raise error" doc:id="9e683730-b1ff-4497-a311-81bdd0e53add" type="MULE:CONNECTIVITY" description="The server cannot handle the request (because it is overloaded or down for maintenance). Generally, this is a temporary state" />
 		<json-logger:logger doc:name="END-ERROR" doc:id="bc2af65b-7aa8-427c-9f80-9c7573a09aed" config-ref="JSON_Logger_Config" message="END: exception-testflow" tracePoint="END">
 			<json-logger:content ><![CDATA[#[import modules::JSONLoggerModule output application/json ---
 {
@@ -75,11 +71,11 @@ output application/json
 		</json-logger:logger>
 		<error-handler >
 			<on-error-propagate enableNotifications="true" logException="true" doc:name="On Error Propagate" doc:id="cc1243d7-8a66-4d8d-9848-6dd6ee77c0ba" >
-				<json-logger:logger doc:name="Logger" doc:id="c266cf59-0fee-4148-94be-10a7bc4dea52" config-ref="JSON_Logger_Config" tracePoint="EXCEPTION" message='#["ERROR: 404 Not found: The external service not found."]' priority="ERROR" >
+				<json-logger:logger doc:name="Logger" doc:id="c266cf59-0fee-4148-94be-10a7bc4dea52" config-ref="JSON_Logger_Config" tracePoint="EXCEPTION" message='#["ERROR: 503 Service Unavailable: The server cannot handle the request (because it is overloaded or down for maintenance). Generally, this is a temporary state."]' priority="ERROR" >
 					<json-logger:content ><![CDATA[{
-   "ErrorCode" : "404”,
-  “ErrorType”:”Not found”,
-  “ErrorDescription”:”The external service not found.”
+   "ErrorCode" : "503”,
+  “ErrorType”:”Service Unavailable",
+  “ErrorDescription”:”The server cannot handle the request (because it is overloaded or down for maintenance). Generally, this is a temporary state.”
 }]]></json-logger:content>
 				</json-logger:logger>
 			</on-error-propagate>
